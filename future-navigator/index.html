@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 FUTURE NAVIGATOR - Ultimate Educational Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000000 0%, #0a0a0a 15%, #1a1a2e 30%, #16213e 50%, #0f3460 75%, #004e92 100%);
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #f8fafc;
+    }
+
+    .clean-card {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(26, 26, 46, 0.6) 50%, rgba(59, 130, 246, 0.15) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 16px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.1);
+    }
+
+    .clean-card:hover {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 46, 0.7) 50%, rgba(59, 130, 246, 0.25) 100%);
+      border-color: rgba(59, 130, 246, 0.6);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(59, 130, 246, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .title-primary {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+
+    .black-blue-gradient {
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .title-secondary {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      line-height: 1.3;
+    }
+
+    .title-section {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+
+    .text-primary {
+      color: #f1f5f9;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .text-secondary {
+      color: #cbd5e1;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .text-muted {
+      color: #94a3b8;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .accent-blue {
+      color: #60a5fa;
+    }
+
+    .accent-purple {
+      color: #a855f7;
+    }
+
+    .accent-green {
+      color: #34d399;
+    }
+
+    .accent-orange {
+      color: #fb923c;
+    }
+
+    .accent-yellow {
+      color: #fbbf24;
+    }
+
+    .accent-red {
+      color: #f87171;
+    }
+
+    .accent-teal {
+      color: #2dd4bf;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: white;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .nav-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-item:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #f1f5f9;
+      transform: translateY(-1px);
+    }
+
+    .nav-item.active {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: white;
+      border-color: transparent;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #cbd5e1;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.375rem 0.75rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-block;
+    }
+
+    .badge-blue {
+      background: rgba(59, 130, 246, 0.2);
+      color: #93c5fd;
+    }
+
+    .badge-green {
+      background: rgba(52, 211, 153, 0.2);
+      color: #6ee7b7;
+    }
+
+    .badge-purple {
+      background: rgba(168, 85, 247, 0.2);
+      color: #c4b5fd;
+    }
+
+    .badge-orange {
+      background: rgba(251, 146, 60, 0.2);
+      color: #fdba74;
+    }
+
+    .badge-yellow {
+      background: rgba(251, 191, 36, 0.2);
+      color: #fde047;
+    }
+
+    .badge-red {
+      background: rgba(248, 113, 113, 0.2);
+      color: #fca5a5;
+    }
+
+    .badge-teal {
+      background: rgba(45, 212, 191, 0.2);
+      color: #7dd3fc;
+    }
+
+    .grid-responsive {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-3 {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .grid-4 {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-content {
+      background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin: 4% auto;
+      padding: 2rem;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .close {
+      color: #94a3b8;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close:hover {
+      color: #f1f5f9;
+    }
+
+    .form-input,
+    .form-select {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #f1f5f9;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #34d399, #60a5fa);
+      border-radius: 4px;
+      transition: width 0.5s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .title-primary {
+        font-size: 2.25rem;
+      }
+
+      .title-secondary {
+        font-size: 1.5rem;
+      }
+
+      .clean-card {
+        margin: 0.25rem;
+        border-radius: 12px;
+      }
+
+      .grid-responsive,
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Notification System -->
+  <div id="notification-container" class="fixed top-5 right-5 z-50 flex flex-col gap-2 max-w-sm"></div>
+
+  <!-- Header -->
+  <header class="clean-card m-4 p-6 animate-fade-in">
+    <div class="text-center">
+      <h1 class="title-primary mb-2">🚀 FUTURE NAVIGATOR</h1>
+      <p class="title-section text-secondary mb-4 text-base md:text-lg">Ultimate Educational Platform • Premium +
+        Government Colleges • Complete Career Guidance</p>
+
+      <div class="flex items-center justify-center gap-6 mb-4">
+        <div class="flex items-center gap-2">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+            <span class="text-white font-bold text-sm" id="user-level">25</span>
+          </div>
+          <div class="text-left">
+            <div class="text-sm font-bold text-primary">Level 25 Ultimate</div>
+            <div class="text-xs text-muted" id="user-xp-streak">18,750 XP • 60 Day Streak</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="progress-bar mb-2 max-w-md mx-auto">
+        <div class="progress-fill" style="width: 97%"></div>
+      </div>
+      <p class="text-xs text-muted">Platform Readiness: 97% Complete • All Higher Education Segments Covered</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="px-4 mb-6">
+    <div class="flex flex-wrap justify-center gap-2 md:gap-3 animate-fade-in">
+      <button onclick="navigate('dashboard')" id="nav-dashboard" class="nav-item active">
+                <i class="fas fa-home"></i> Dashboard
+            </button>
+      <button onclick="navigate('career-guide')" id="nav-career-guide" class="nav-item">
+                <i class="fas fa-compass"></i> Career Guide
+            </button>
+      <button onclick="navigate('stream-selector')" id="nav-stream-selector" class="nav-item">
+                <i class="fas fa-route"></i> Stream Guide
+            </button>
+      <button onclick="navigate('colleges')" id="nav-colleges" class="nav-item">
+                <i class="fas fa-university"></i> All Colleges
+            </button>
+      <button onclick="navigate('placements')" id="nav-placements" class="nav-item">
+                <i class="fas fa-briefcase"></i> Placements
+            </button>
+      <button onclick="navigate('ai-tutor')" id="nav-ai-tutor" class="nav-item">
+                <i class="fas fa-robot"></i> AI Tutor
+            </button>
+      <button onclick="navigate('scholarships')" id="nav-scholarships" class="nav-item">
+                <i class="fas fa-graduation-cap"></i> Scholarships
+            </button>
+      <button onclick="navigate('predictor')" id="nav-predictor" class="nav-item">
+                <i class="fas fa-chart-line"></i> Predictor
+            </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main id="app" class="px-4 pb-12 max-w-7xl mx-auto">
+    <!-- Injected via JavaScript -->
+  </main>
+
+  <!-- Generic Modal Window -->
+  <div id="modal" class="modal" onclick="if(event.target === this) closeModal()">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script>
+    // =================== DATA DEFINITIONS ===================
+
+        let currentView = 'dashboard';
+        let userProgress = { level: 25, xp: 18750, streak: 60, courses: 120, careerTests: 25, streamsExplored: 8 };
+
+        const streamGuidance = [
+            {
+                id: 'science',
+                name: 'Science Stream',
+                icon: '🔬',
+                color: 'blue',
+                description: 'For students interested in technology, medicine, engineering, and research fields.',
+                subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Computer Science'],
+                governmentCourses: ['B.Sc. Physics', 'B.Sc. Chemistry', 'B.Sc. Mathematics', 'B.Sc. Computer Science', 'MBBS', 'B.Tech'],
+                careerPaths: [
+                    { name: 'Computer Science Engineer', salary: '₹6-25 LPA', growth: 'Excellent', description: 'Software architectures, system design, and algorithms across tech sectors.' },
+                    { name: 'Doctor (MBBS)', salary: '₹8-25 LPA', growth: 'Excellent', description: 'Clinical medicine, hospital administration, and health specialization.' },
+                    { name: 'Civil Engineer', salary: '₹4-12 LPA', growth: 'Stable', description: 'Planning and executing infrastructure such as bridges, dams, and highways.' }
+                ],
+                entranceExams: ['JEE Main', 'JEE Advanced', 'NEET-UG', 'BITSAT', 'State CETs'],
+                governmentJobs: ['SSC Scientific Assistant', 'Railway Technical Cadre', 'DRDO/ISRO Scientist', 'Medical Officer'],
+                affordability: 'High - Subsidized state and central universities offer high ROI.'
+            },
+            {
+                id: 'commerce',
+                name: 'Commerce Stream',
+                icon: '💼',
+                color: 'green',
+                description: 'For students oriented towards banking, enterprise finance, economics, and corporate law.',
+                subjects: ['Accountancy', 'Business Studies', 'Economics', 'Applied Mathematics'],
+                governmentCourses: ['B.Com', 'B.Com (Hons)', 'BBA', 'B.A. Economics (Hons)'],
+                careerPaths: [
+                    { name: 'Chartered Accountant', salary: '₹8-30 LPA', growth: 'Excellent', description: 'Auditing, tax strategy, enterprise valuation, and financial advisory.' },
+                    { name: 'Financial Analyst', salary: '₹5-18 LPA', growth: 'Excellent', description: 'Investment appraisals, equity research, and portfolio modeling.' },
+                    { name: 'Banking Officer', salary: '₹5-15 LPA', growth: 'Good', description: 'Branch management, credit analysis, and treasury operations.' }
+                ],
+                entranceExams: ['CUET-UG', 'IPMAT', 'CA Foundation', 'State University Entrances'],
+                governmentJobs: ['RBI Grade B Officer', 'IBPS PO/Clerk', 'Income Tax Inspector', 'CAG Auditor'],
+                affordability: 'Very High - Commerce degrees in government colleges cost minimal tuition.'
+            },
+            {
+                id: 'arts',
+                name: 'Arts & Humanities',
+                icon: '🎨',
+                color: 'purple',
+                description: 'For students passionate about governance, journalism, public policy, psychology, and design.',
+                subjects: ['History', 'Political Science', 'Psychology', 'Sociology', 'Literature'],
+                governmentCourses: ['B.A. Political Science', 'B.A. Journalism', 'BSW', 'B.A. Psychology'],
+                careerPaths: [
+                    { name: 'Civil Services Officer', salary: '₹7-50 LPA', growth: 'High Status', description: 'Administrative administration, public order, and macro policy execution.' },
+                    { name: 'Corporate Lawyer', salary: '₹6-25 LPA', growth: 'Excellent', description: 'Legal advisory, contract drafting, and regulatory litigation.' },
+                    { name: 'Media Strategist & Journalist', salary: '₹3-12 LPA', growth: 'Good', description: 'Investigative reporting, content direction, and broadcast media.' }
+                ],
+                entranceExams: ['CUET-UG', 'CLAT (for Law)', 'State CETs'],
+                governmentJobs: ['UPSC Civil Services (IAS/IPS/IFS)', 'State PSC', 'Information Officer', 'State Teaching (TET)'],
+                affordability: 'Highest - Most economical pathway with maximum public-sector alignment.'
+            }
+        ];
+
+        const governmentColleges = [
+            {
+                id: 'govt-college-1',
+                name: 'Government Model Science & Commerce College',
+                type: 'Government',
+                location: 'Central Campus, State University',
+                courses: ['B.Sc.', 'B.Com', 'BCA'],
+                fees: '₹8,000 - ₹14,000/yr',
+                cutoff: '65-80% Merit',
+                facilities: ['Central Library', 'Digital Labs', 'Hostel Facility', 'Sports Complex'],
+                distance: '3.2 km',
+                totalSeats: 1200,
+                color: 'green',
+                icon: '🏛️',
+                placement: { rate: '72%', avgPackage: '₹4.2 LPA', topRecruiters: ['TCS', 'SBI', 'State Depts', 'Wipro'] }
+            },
+            {
+                id: 'govt-college-2',
+                name: 'State Premier Arts & Science Institute',
+                type: 'Government Autonomous',
+                location: 'Civil Lines',
+                courses: ['B.A. (Hons)', 'B.Sc.', 'B.Com (Hons)'],
+                fees: '₹5,000 - ₹11,000/yr',
+                cutoff: '70-85% Merit',
+                facilities: ['Hostel', 'Seminar Hall', 'Research Labs', 'Canteen'],
+                distance: '6.5 km',
+                totalSeats: 1450,
+                color: 'purple',
+                icon: '🏛️',
+                placement: { rate: '75%', avgPackage: '₹4.8 LPA', topRecruiters: ['Banking Cadre', 'Local Enterprises', 'EdTech'] }
+            }
+        ];
+
+        const premiumInstitutes = [
+            {
+                id: 'iit-delhi',
+                name: 'IIT Delhi',
+                type: 'IIT (Institute of National Importance)',
+                location: 'Hauz Khas, New Delhi',
+                courses: ['B.Tech', 'M.Tech', 'M.Sc', 'PhD'],
+                admission: 'JEE Advanced',
+                fees: '₹8-10 Lakhs Total',
+                cutoff: 'AIR 1 - 4,500',
+                avgPackage: '₹19.17 LPA',
+                highest: '₹2.14 Cr',
+                icon: '🏛️',
+                color: 'blue',
+                topCompanies: ['Google', 'Microsoft', 'Goldman Sachs', 'McKinsey', 'Apple']
+            },
+            {
+                id: 'iit-bombay',
+                name: 'IIT Bombay',
+                type: 'IIT',
+                location: 'Powai, Mumbai',
+                courses: ['B.Tech', 'BS', 'Dual Degree'],
+                admission: 'JEE Advanced',
+                fees: '₹8-10 Lakhs Total',
+                cutoff: 'AIR 1 - 3,500',
+                avgPackage: '₹18.22 LPA',
+                highest: '₹1.80 Cr',
+                icon: '🏛️',
+                color: 'blue',
+                topCompanies: ['Qualcomm', 'Intel', 'Boston Consulting Group', 'Amazon']
+            },
+            {
+                id: 'iim-ahmedabad',
+                name: 'IIM Ahmedabad',
+                type: 'IIM',
+                location: 'Ahmedabad, Gujarat',
+                courses: ['MBA / PGP', 'PGPX', 'PhD'],
+                admission: 'CAT',
+                fees: '₹25 Lakhs Total',
+                cutoff: '99.5+ Percentile',
+                avgPackage: '₹34.36 LPA',
+                highest: '₹1.15 Cr',
+                icon: '💼',
+                color: 'yellow',
+                topCompanies: ['McKinsey', 'Bain', 'Goldman Sachs', 'Blackstone']
+            }
+        ];
+
+        const comprehensiveCareerPaths = [
+            {
+                id: 'civil-servant',
+                title: 'Civil Services Officer (IAS/IPS/IFS)',
+                category: 'Public Administration',
+                icon: '🏛️',
+                color: 'red',
+                avgSalary: '₹7-50 LPA',
+                growth: '+15% Authority & Scope',
+                description: 'Direct national administrative administration, law enforcement, and strategic development.',
+                governmentCollegeRoute: 'Any Bachelor degree (B.A./B.Sc./B.Com) from a recognized university fulfills UPSC criteria.',
+                examRequired: 'UPSC CSE (Prelims + Mains + Interview)',
+                topRecruiters: ['Central Government', 'State Governments']
+            },
+            {
+                id: 'bank-officer',
+                title: 'Public Sector Bank Probationary Officer',
+                category: 'Banking & Financial Operations',
+                icon: '🏦',
+                color: 'green',
+                avgSalary: '₹6-14 LPA',
+                growth: '+10% Demand',
+                description: 'Manage retail banking operations, credit underwriting, and investment facilitation.',
+                governmentCollegeRoute: 'Direct pathway for B.Com/B.Sc. graduates with quant and logical reasoning prep.',
+                examRequired: 'IBPS PO, SBI PO, RBI Assistant',
+                topRecruiters: ['SBI', 'Punjab National Bank', 'Bank of Baroda']
+            },
+            {
+                id: 'software-dev',
+                title: 'Software Development Engineer',
+                category: 'Information Technology',
+                icon: '💻',
+                color: 'blue',
+                avgSalary: '₹6-30 LPA',
+                growth: '+22% High Demand',
+                description: 'Build backend microservices, web platforms, cloud automation, and scalable client systems.',
+                governmentCollegeRoute: 'B.Sc. Computer Science / BCA + Open source contributions and DSA training.',
+                examRequired: 'GATE (for PSU/M.Tech) or Direct Technical Assessments',
+                topRecruiters: ['Product Companies', 'Service Firms', 'Fintech Startups']
+            }
+        ];
+
+        const scholarships = [
+            {
+                id: 'inspire',
+                name: 'INSPIRE Scholarship (SHE)',
+                provider: 'Department of Science and Technology (Govt of India)',
+                amount: '₹80,000 / year',
+                deadline: 'Rolling / Annual',
+                type: 'Government',
+                icon: '🔬',
+                color: 'green',
+                eligibility: 'Top 1% in Class 12 Boards pursuing basic science degree.',
+                description: 'Direct cash fellowship to support undergraduate students entering scientific research.'
+            },
+            {
+                id: 'pm-usp',
+                name: 'Central Sector Scheme of Scholarships (PM-USP)',
+                provider: 'Ministry of Education (Govt of India)',
+                amount: '₹12,000 - ₹20,000 / year',
+                deadline: 'October 31',
+                type: 'Government',
+                icon: '🎓',
+                color: 'blue',
+                eligibility: 'Above 80th percentile in Class 12, family income under ₹4.5 LPA.',
+                description: 'Financial support for college and university students throughout undergraduate studies.'
+            },
+            {
+                id: 'tata-endowment',
+                name: 'J.N. Tata Endowment',
+                provider: 'Tata Trusts',
+                amount: 'Up to ₹10 Lakhs',
+                deadline: 'March 31',
+                type: 'Private',
+                icon: '🏆',
+                color: 'purple',
+                eligibility: 'Graduates with distinguished academic records aiming for higher education.',
+                description: 'Loan scholarship with generous partial gift-grant components.'
+            }
+        ];
+
+        const examData = [
+            {
+                id: 'jee-main',
+                name: 'JEE Main',
+                type: 'Engineering',
+                totalSeats: '1,50,000+ (NITs, IIITs, GFTIs)',
+                icon: '📐',
+                color: 'blue',
+                cutoffs: { general: '91-93 Percentile', obc: '75-78 Percentile', sc: '52-55 Percentile', st: '42-45 Percentile' }
+            },
+            {
+                id: 'neet-ug',
+                name: 'NEET-UG',
+                type: 'Medical & Dental',
+                totalSeats: '1,08,000+ MBBS Seats',
+                icon: '🏥',
+                color: 'green',
+                cutoffs: { general: '610+ Marks (Govt MBBS)', obc: '595+ Marks', sc: '480+ Marks', st: '450+ Marks' }
+            },
+            {
+                id: 'cuet-ug',
+                name: 'CUET-UG',
+                type: 'Central Universities (B.A./B.Com/B.Sc)',
+                totalSeats: '2,50,000+ Pan-India',
+                icon: '🏛️',
+                color: 'purple',
+                cutoffs: { general: '720-780/800 (Top DU Colleges)', obc: '680+', sc: '600+', st: '560+' }
+            }
+        ];
+
+        // =================== VIEW RENDERING FUNCTIONS ===================
+
+        function renderDashboard() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in space-y-6">
+                    <div class="clean-card p-6 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30">
+                        <div class="text-center">
+                            <h2 class="title-section accent-blue mb-2">🌟 Ultimate Educational Navigator</h2>
+                            <p class="text-secondary mb-4">Unbiased guidance covering top tier institutes, regional government colleges, and alternative career routes.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                                <span class="badge badge-blue">IIT/IIM/NIT Tracks</span>
+                                <span class="badge badge-green">Affordable Govt Colleges</span>
+                                <span class="badge badge-purple">Stream Selection</span>
+                                <span class="badge badge-yellow">Admission Predictor</span>
+                            </div>
+                            <div class="grid-2 gap-4 max-w-xl mx-auto">
+                                <button class="btn-primary" onclick="navigate('stream-selector')">
+                                    <i class="fas fa-route"></i> Stream Selector (10th/12th)
+                                </button>
+                                <button class="btn-primary" onclick="navigate('predictor')">
+                                    <i class="fas fa-chart-line"></i> Admission Predictor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-4">
+                        <div class="stat-card">
+                            <div class="stat-number accent-blue">500+</div>
+                            <div class="stat-label">Colleges Indexed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number accent-green">25+</div>
+                            <div class="stat-label">Verified Career Maps</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number accent-purple">3</div>
+                            <div class="stat-label">High-School Streams</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number accent-yellow">₹50 Cr+</div>
+                            <div class="stat-label">Scholarship Funds</div>
+                        </div>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="clean-card p-6 cursor-pointer" onclick="navigate('stream-selector')">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="text-4xl">🎓</div>
+                                <div>
+                                    <h3 class="title-section text-lg accent-blue">High School Students</h3>
+                                    <p class="text-secondary text-sm">Find your natural stream fit</p>
+                                </div>
+                            </div>
+                            <p class="text-muted text-xs mb-4">Assess your strengths and choose between Science, Commerce, and Humanities without external bias.</p>
+                            <button class="btn-secondary w-full text-xs">Run Assessment</button>
+                        </div>
+
+                        <div class="clean-card p-6 cursor-pointer" onclick="navigate('colleges')">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="text-4xl">🏛️</div>
+                                <div>
+                                    <h3 class="title-section text-lg accent-green">Govt College Options</h3>
+                                    <p class="text-secondary text-sm">Quality education with high ROI</p>
+                                </div>
+                            </div>
+                            <p class="text-muted text-xs mb-4">Discover state institutions offering three-year standard degrees at nominal fees with high civil exam clearance rates.</p>
+                            <button class="btn-secondary w-full text-xs">Search Colleges</button>
+                        </div>
+
+                        <div class="clean-card p-6 cursor-pointer" onclick="navigate('placements')">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="text-4xl">💼</div>
+                                <div>
+                                    <h3 class="title-section text-lg accent-purple">Placement Records</h3>
+                                    <p class="text-secondary text-sm">Real compensation analytics</p>
+                                </div>
+                            </div>
+                            <p class="text-muted text-xs mb-4">Inspect vetted placement statistics across government universities and premier technology institutes.</p>
+                            <button class="btn-secondary w-full text-xs">View Insights</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderStreamSelector() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in space-y-6">
+                    <div class="text-center mb-6">
+                        <h2 class="title-secondary text-primary mb-2">🎯 Stream Guidance & Evaluation</h2>
+                        <p class="text-secondary">Explore career horizons and curricula for high-school academic branches</p>
+                    </div>
+
+                    <div class="clean-card p-6 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30 text-center">
+                        <h3 class="title-section accent-purple mb-2">🧠 5-Minute Stream Fit Assessment</h3>
+                        <p class="text-secondary mb-4 max-w-xl mx-auto text-sm">Identify whether your problem-solving habits lean towards analytical research, enterprise finance, or social sciences.</p>
+                        <button class="btn-primary" onclick="startStreamAssessment()">
+                            <i class="fas fa-play"></i> Start Quiz
+                        </button>
+                    </div>
+
+                    <div class="grid-responsive">
+                        ${streamGuidance.map(stream => `
+                            <div class="clean-card p-6 cursor-pointer flex flex-col justify-between" onclick="exploreStream('${stream.id}')">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="text-4xl">${stream.icon}</div>
+                                        <div>
+                                            <h3 class="title-section text-xl accent-${stream.color}">${stream.name}</h3>
+                                            <p class="text-muted text-xs">${stream.description}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <p class="text-primary text-xs font-bold mb-1">Subjects:</p>
+                                        <div class="flex flex-wrap gap-1">
+                                            ${stream.subjects.map(s => `<span class="badge badge-${stream.color} text-xs">${s}</span>`).join('')}
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <p class="text-primary text-xs font-bold mb-1">Target Govt Degrees:</p>
+                                        <p class="text-secondary text-xs">${stream.governmentCourses.slice(0, 3).join(', ')}</p>
+                                    </div>
+                                </div>
+
+                                <button class="btn-secondary w-full text-xs mt-4">Inspect Full Stream</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEnhancedCareerGuide() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in space-y-6">
+                    <div class="text-center mb-6">
+                        <h2 class="title-secondary text-primary mb-2">🗺️ Career Mapping Engine</h2>
+                        <p class="text-secondary">Structured pathways from graduation through target roles</p>
+                    </div>
+
+                    <div class="grid-responsive">
+                        ${comprehensiveCareerPaths.map(career => `
+                            <div class="clean-card p-5 cursor-pointer flex flex-col justify-between" onclick="showCareerDetails('${career.id}')">
+                                <div>
+                                    <div class="flex items-start justify-between mb-3">
+                                        <div>
+                                            <h4 class="text-lg font-bold accent-${career.color}">${career.title}</h4>
+                                            <p class="text-muted text-xs">${career.category}</p>
+                                        </div>
+                                        <div class="text-3xl">${career.icon}</div>
+                                    </div>
+
+                                    <div class="flex gap-2 mb-3">
+                                        <span class="badge badge-${career.color} text-xs">${career.avgSalary}</span>
+                                        <span class="badge badge-green text-xs">${career.growth}</span>
+                                    </div>
+
+                                    <p class="text-secondary text-sm mb-3">${career.description}</p>
+
+                                    <div class="p-3 bg-white bg-opacity-5 rounded-lg mb-2 text-xs">
+                                        <p class="text-primary font-semibold mb-1">College Alignment:</p>
+                                        <p class="text-secondary">${career.governmentCollegeRoute}</p>
+                                    </div>
+                                </div>
+
+                                <button class="btn-secondary w-full text-xs mt-3">Full Career Blueprint</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAllColleges() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in space-y-6">
+                    <div class="text-center mb-6">
+                        <h2 class="title-secondary text-primary mb-2">🏛️ College Database</h2>
+                        <p class="text-secondary">Explore accredited state colleges and apex institutions</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold accent-green">Affordable Government Colleges</h3>
+                        <div class="grid-2">
+                            ${governmentColleges.map(c => `
+                                <div class="clean-card p-5 cursor-pointer" onclick="showCollegeDetails('${c.id}')">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h4 class="text-lg font-bold accent-${c.color}">${c.name}</h4>
+                                        <span class="badge badge-green text-xs">${c.distance}</span>
+                                    </div>
+                                    <p class="text-muted text-xs mb-3"><i class="fas fa-map-marker-alt mr-1"></i>${c.location}</p>
+                                    <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+                                        <div class="bg-white bg-opacity-5 p-2 rounded">
+                                            <span class="text-muted block">Annual Fee</span>
+                                            <span class="font-bold text-white">${c.fees}</span>
+                                        </div>
+                                        <div class="bg-white bg-opacity-5 p-2 rounded">
+                                            <span class="text-muted block">Avg Package</span>
+                                            <span class="font-bold accent-green">${c.placement.avgPackage}</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-secondary w-full text-xs">View College Metrics</button>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <h3 class="text-xl font-bold accent-blue pt-4">Apex National Institutes</h3>
+                        <div class="grid-2">
+                            ${premiumInstitutes.map(p => `
+                                <div class="clean-card p-5 cursor-pointer" onclick="showCollegeDetails('${p.id}')">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h4 class="text-lg font-bold accent-${p.color}">${p.name}</h4>
+                                        <span class="badge badge-blue text-xs">${p.admission}</span>
+                                    </div>
+                                    <p class="text-muted text-xs mb-3"><i class="fas fa-map-marker-alt mr-1"></i>${p.location}</p>
+                                    <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+                                        <div class="bg-white bg-opacity-5 p-2 rounded">
+                                            <span class="text-muted block">Highest Offer</span>
+                                            <span class="font-bold accent-orange">${p.highest}</span>
+                                        </div>
+                                        <div class="bg-white bg-opacity-5 p-2 rounded">
+                                            <span class="text-muted block">Average CTC</span>
+                                            <span class="font-bold accent-green">${p.avgPackage}</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-secondary w-full text-xs">View Institute Profile</button>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPlacementsAndOpportunities() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in space-y-6">
+                    <div class="text-center mb-6">
+                        <h2 class="title-secondary black-blue-gradient mb-2">🏆 Placement Intelligence</h2>
+                        <p class="text-secondary">Verified recruitment numbers, package medians, and active corporate hirers</p>
+                    </div>
+
+                    <div class="grid-4 mb-6">
+                        <div class="stat-card">
+                            <div class="text-2xl font-bold accent-green">₹14.8 LPA</div>
+                            <div class="text-xs text-muted">Tier-1 Median CTC</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-2xl font-bold accent-blue">₹2.14 Cr</div>
+                            <div class="text-xs text-muted">Peak International CTC</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-2xl font-bold text-blue-300">89.4%</div>
+                            <div class="text-xs text-muted">Aggregate Placement</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-2xl font-bold accent-yellow">200+</div>
+                            <div class="text-xs text-muted">Active Recruiters</div>
+                        </div>
+                    </div>
+
+                    <div class="grid-responsive">
+                        ${[...premiumInstitutes, ...governmentColleges].map(inst => `
+                            <div class="clean-card p-5">
+                                <h4 class="text-lg font-bold text-white mb-1">${inst.name}</h4>
+                                <p class="text-xs text-muted mb-3"><i class="fas fa-map-marker-alt mr-1"></i>${inst.location}</p>
+
+                                <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+                                    <div class="p-2 rounded bg-white bg-opacity-5">
+                                        <span class="text-muted block">Average CTC</span>
+                                        <span class="font-bold accent-green">${inst.avgPackage || inst.placement?.avgPackage}</span>
+                                    </div>
+                                    <div class="p-2 rounded bg-white bg-opacity-5">
+                                        <span class="text-muted block">${inst.highest ? 'Peak Offer' : 'Placement %'}</span>
+                                        <span class="font-bold accent-blue">${inst.highest || inst.placement?.rate}</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-xs text-muted font-bold mb-1">Key Hirers:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    ${(inst.topCompanies || inst.placement?.topRecruiters || []).slice(0, 4).map(c => `
+                                        <span class="badge badge-blue text-xs">${c}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAITutor() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in max-w-3xl mx-auto space-y-6">
+                    <div class="text-center">
+                        <h2 class="title-secondary accent-blue mb-2">🤖 Interactive Academic Advisor</h2>
+                        <p class="text-secondary text-sm">Ask questions regarding eligibility cutoffs, entrance exam timelines, or course syllabi</p>
+                    </div>
+
+                    <div class="clean-card p-6 space-y-4">
+                        <div id="chat-box" class="h-64 overflow-y-auto space-y-3 p-3 bg-black/40 rounded-xl border border-white/10 text-sm">
+                            <div class="flex gap-2">
+                                <span class="accent-blue font-bold">Navigator AI:</span>
+                                <span class="text-secondary">Greetings! How can I assist you with your college admissions or career planning journey today?</span>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-2">
+                            <input type="text" id="ai-input" class="form-input flex-1" placeholder="Ask about cutoffs, fees, or preparation tips..." onkeydown="if(event.key === 'Enter') sendChatMessage()">
+                            <button class="btn-primary" onclick="sendChatMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <button class="btn-secondary" onclick="insertQuickPrompt('What are good alternatives to B.Tech in government colleges?')">Alternatives to B.Tech</button>
+                            <button class="btn-secondary" onclick="insertQuickPrompt('How do I prepare for UPSC CSE alongside a B.A. degree?')">UPSC with B.A.</button>
+                            <button class="btn-secondary" onclick="insertQuickPrompt('What is the eligibility for the INSPIRE scholarship?')">INSPIRE Details</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderScholarships() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in space-y-6">
+                    <div class="text-center mb-6">
+                        <h2 class="title-secondary text-primary mb-2">🎓 Scholarships & Research Fellowships</h2>
+                        <p class="text-secondary">Discover active funding, eligibility criteria, and deadlines</p>
+                    </div>
+
+                    <div class="grid-responsive">
+                        ${scholarships.map(sch => `
+                            <div class="clean-card p-5 cursor-pointer flex flex-col justify-between" onclick="showScholarshipDetails('${sch.id}')">
+                                <div>
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="text-lg font-bold accent-${sch.color}">${sch.name}</h3>
+                                        <span class="text-2xl">${sch.icon}</span>
+                                    </div>
+                                    <p class="text-muted text-xs mb-2">${sch.provider}</p>
+
+                                    <div class="flex gap-2 mb-3">
+                                        <span class="badge badge-${sch.color} text-xs">${sch.type}</span>
+                                        <span class="badge badge-yellow text-xs">${sch.amount}</span>
+                                    </div>
+
+                                    <div class="text-xs text-secondary space-y-2 mb-3">
+                                        <p><strong>Eligibility:</strong> ${sch.eligibility}</p>
+                                        <p class="text-muted">${sch.description}</p>
+                                    </div>
+                                </div>
+
+                                <div class="border-t border-white/10 pt-3 flex justify-between items-center text-xs">
+                                    <span class="text-muted">Deadline: <strong class="text-white">${sch.deadline}</strong></span>
+                                    <button class="btn-secondary text-xs">View Application</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAdmissionPredictor() {
+            document.getElementById('app').innerHTML = `
+                <div class="animate-fade-in max-w-2xl mx-auto space-y-6">
+                    <div class="text-center mb-6">
+                        <h2 class="title-secondary text-primary mb-2">🎯 Smart Admission Chance Estimator</h2>
+                        <p class="text-secondary text-sm">Estimate admission probabilities based on your test results and quotas</p>
+                    </div>
+
+                    <div class="clean-card p-6">
+                        <form id="predictor-form" onsubmit="calculatePrediction(event)" class="space-y-4">
+                            <div class="grid-2 gap-4">
+                                <div>
+                                    <label class="block text-primary text-xs font-bold mb-1">Target Examination</label>
+                                    <select id="target-exam" required class="form-select w-full text-sm">
+                                        <option value="">Select Exam</option>
+                                        ${examData.map(e => `<option value="${e.id}">${e.name} (${e.type})</option>`).join('')}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-primary text-xs font-bold mb-1">Your Marks or Percentile</label>
+                                    <input type="number" step="any" id="user-score" required class="form-input w-full text-sm" placeholder="e.g. 94 or 620">
+                                </div>
+                            </div>
+
+                            <div class="grid-2 gap-4">
+                                <div>
+                                    <label class="block text-primary text-xs font-bold mb-1">Category / Quota</label>
+                                    <select id="user-category" class="form-select w-full text-sm">
+                                        <option value="general">General (Open)</option>
+                                        <option value="obc">OBC-NCL</option>
+                                        <option value="sc">SC</option>
+                                        <option value="st">ST</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-primary text-xs font-bold mb-1">Home State Quota</label>
+                                    <select id="home-state" class="form-select w-full text-sm">
+                                        <option value="all-india">All India / Outside State</option>
+                                        <option value="home-state">Home State Quota Eligible</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full mt-2">
+                                <i class="fas fa-calculator mr-1"></i> Calculate Admission Probability
+                            </button>
+                        </form>
+
+                        <div id="prediction-result" class="mt-6 hidden p-4 rounded-xl border border-white/20 bg-white/5 animate-fade-in"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // =================== INTERACTIVE LOGIC ===================
+
+        function calculatePrediction(e) {
+            e.preventDefault();
+            const examId = document.getElementById('target-exam').value;
+            const score = parseFloat(document.getElementById('user-score').value);
+            const category = document.getElementById('user-category').value;
+            const resultBox = document.getElementById('prediction-result');
+
+            let chance = 'Moderate';
+            let color = 'accent-yellow';
+            let summary = '';
+
+            if (examId === 'jee-main') {
+                if (score >= 95) { chance = 'High Probability'; color = 'accent-green'; summary = 'Strong eligibility for top-tier NIT core computer science or electronics departments.'; }
+                else if (score >= 88) { chance = 'Moderate Probability'; color = 'accent-yellow'; summary = 'Viable for mid-tier NITs and leading state government technology colleges.'; }
+                else { chance = 'Competitive / Backup Recommended'; color = 'accent-orange'; summary = 'Recommend evaluating state CETs or central university bachelor of science pathways.'; }
+            } else if (examId === 'neet-ug') {
+                if (score >= 620) { chance = 'High Probability'; color = 'accent-green'; summary = 'Likely qualification for state or central government medical colleges.'; }
+                else if (score >= 540) { chance = 'Moderate'; color = 'accent-yellow'; summary = 'Competitive for BDS, BAMS, or state quota medical institutions.'; }
+                else { chance = 'Low for Govt MBBS'; color = 'accent-red'; summary = 'Consider Allied Health Sciences or B.Sc. Biotechnology routes.'; }
+            } else {
+                chance = score >= 80 ? 'High' : 'Moderate';
+                color = score >= 80 ? 'accent-green' : 'accent-yellow';
+                summary = 'Your marks place you in a competitive bracket for premier central universities.';
+            }
+
+            resultBox.className = 'mt-6 p-4 rounded-xl border border-white/20 bg-white/5 animate-fade-in block';
+            resultBox.innerHTML = `
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-bold text-white">Estimated Status:</span>
+                    <span class="font-extrabold ${color}">${chance}</span>
+                </div>
+                <p class="text-xs text-secondary mb-3">${summary}</p>
+                <div class="text-[11px] text-muted">Basis: Category (${category.toUpperCase()}) historical cutoff medians.</div>
+            `;
+            showNotification('Prediction generated successfully!', 'success');
+        }
+
+        function startStreamAssessment() {
+            showModal(`
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold accent-purple">Quick Stream Fit Evaluation</h3>
+                    <p class="text-secondary text-sm">Select the statements that best describe your working interests:</p>
+
+                    <div class="space-y-3 text-sm">
+                        <label class="block p-3 rounded-lg bg-white/5 cursor-pointer hover:bg-white/10">
+                            <input type="radio" name="sq" value="science" class="mr-2" checked>
+                            I like diagnosing how mechanical things function, writing software code, or studying medical biology.
+                        </label>
+                        <label class="block p-3 rounded-lg bg-white/5 cursor-pointer hover:bg-white/10">
+                            <input type="radio" name="sq" value="commerce" class="mr-2">
+                            I am interested in how stock markets operate, managing businesses, and tracking finances.
+                        </label>
+                        <label class="block p-3 rounded-lg bg-white/5 cursor-pointer hover:bg-white/10">
+                            <input type="radio" name="sq" value="arts" class="mr-2">
+                            I enjoy reading history, understanding government policy, creative writing, and public advocacy.
+                        </label>
+                    </div>
+
+                    <div class="flex justify-end gap-2 pt-2">
+                        <button class="btn-secondary text-xs" onclick="closeModal()">Cancel</button>
+                        <button class="btn-primary text-xs" onclick="finishStreamAssessment()">View Recommendation</button>
+                    </div>
+                </div>
+            `);
+        }
+
+        function finishStreamAssessment() {
+            const selected = document.querySelector('input[name="sq"]:checked').value;
+            closeModal();
+            exploreStream(selected);
+            userProgress.xp += 100;
+            updateStats();
+            showNotification('Earned +100 XP for completing Stream Assessment!', 'success');
+        }
+
+        function exploreStream(streamId) {
+            const stream = streamGuidance.find(s => s.id === streamId);
+            if (!stream) return;
+
+            showModal(`
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-4xl">${stream.icon}</span>
+                        <div>
+                            <h3 class="text-xl font-bold accent-${stream.color}">${stream.name}</h3>
+                            <p class="text-muted text-xs">${stream.description}</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs">
+                        <p class="font-bold text-white">Recommended Academic Core:</p>
+                        <div class="flex flex-wrap gap-1">
+                            ${stream.subjects.map(s => `<span class="badge badge-${stream.color}">${s}</span>`).join('')}
+                        </div>
+
+                        <p class="font-bold text-white pt-2">Available Government College Courses:</p>
+                        <p class="text-secondary">${stream.governmentCourses.join(', ')}</p>
+
+                        <p class="font-bold text-white pt-2">Key Entrance Gateways:</p>
+                        <p class="text-secondary">${stream.entranceExams.join(', ')}</p>
+
+                        <div class="p-3 bg-white/5 rounded-lg mt-3">
+                            <span class="font-bold text-green-400 block mb-1">Financial ROI Note:</span>
+                            <span class="text-muted">${stream.affordability}</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end pt-3">
+                        <button class="btn-primary text-xs" onclick="closeModal()">Understood</button>
+                    </div>
+                </div>
+            `);
+        }
+
+        function showCareerDetails(careerId) {
+            const c = comprehensiveCareerPaths.find(item => item.id === careerId);
+            if (!c) return;
+
+            showModal(`
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-4xl">${c.icon}</span>
+                        <div>
+                            <h3 class="text-xl font-bold accent-${c.color}">${c.title}</h3>
+                            <span class="badge badge-${c.color} text-[10px]">${c.category}</span>
+                        </div>
+                    </div>
+
+                    <p class="text-secondary text-sm">${c.description}</p>
+
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="p-2 rounded bg-white/5">
+                            <span class="text-muted block">Salary Spectrum</span>
+                            <span class="font-bold text-white">${c.avgSalary}</span>
+                        </div>
+                        <div class="p-2 rounded bg-white/5">
+                            <span class="text-muted block">Qualifying Exam</span>
+                            <span class="font-bold accent-green">${c.examRequired}</span>
+                        </div>
+                    </div>
+
+                    <div class="p-3 rounded bg-white/5 text-xs space-y-1">
+                        <span class="font-bold text-white block">Government College Graduate Blueprint:</span>
+                        <p class="text-secondary">${c.governmentCollegeRoute}</p>
+                    </div>
+
+                    <div class="flex justify-end pt-2">
+                        <button class="btn-primary text-xs" onclick="closeModal()">Close</button>
+                    </div>
+                </div>
+            `);
+        }
+
+        function showCollegeDetails(id) {
+            const college = [...governmentColleges, ...premiumInstitutes].find(c => c.id === id);
+            if (!college) return;
+
+            showModal(`
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl font-bold accent-${college.color}">${college.name}</h3>
+                            <p class="text-muted text-xs">${college.location}</p>
+                        </div>
+                        <span class="text-3xl">${college.icon}</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="p-2 rounded bg-white/5">
+                            <span class="text-muted block">Tuition / Fees</span>
+                            <span class="font-bold text-white">${college.fees}</span>
+                        </div>
+                        <div class="p-2 rounded bg-white/5">
+                            <span class="text-muted block">Avg Package</span>
+                            <span class="font-bold accent-green">${college.avgPackage || college.placement?.avgPackage}</span>
+                        </div>
+                    </div>
+
+                    <div class="text-xs space-y-1">
+                        <span class="font-bold text-white block">Programs Offered:</span>
+                        <p class="text-secondary">${college.courses.join(', ')}</p>
+                    </div>
+
+                    <div class="flex justify-end pt-2">
+                        <button class="btn-primary text-xs" onclick="closeModal()">Close Details</button>
+                    </div>
+                </div>
+            `);
+        }
+
+        function showScholarshipDetails(id) {
+            const sch = scholarships.find(s => s.id === id);
+            if (!sch) return;
+
+            showModal(`
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold accent-${sch.color}">${sch.name}</h3>
+                    <p class="text-xs text-muted">Offered by: ${sch.provider}</p>
+
+                    <div class="p-3 rounded bg-white/5 text-xs space-y-2">
+                        <p><strong>Funding Amount:</strong> <span class="accent-yellow font-bold">${sch.amount}</span></p>
+                        <p><strong>Eligibility Conditions:</strong> ${sch.eligibility}</p>
+                        <p><strong>Details:</strong> ${sch.description}</p>
+                        <p><strong>Deadline:</strong> <span class="text-white font-bold">${sch.deadline}</span></p>
+                    </div>
+
+                    <div class="flex justify-end gap-2 pt-2">
+                        <button class="btn-secondary text-xs" onclick="closeModal()">Close</button>
+                        <button class="btn-primary text-xs" onclick="showNotification('Redirecting to official scholarship portal...', 'info')">Official Application</button>
+                    </div>
+                </div>
+            `);
+        }
+
+        // =================== AI TUTOR CHAT ENGINE ===================
+
+        function sendChatMessage() {
+            const input = document.getElementById('ai-input');
+            const chatBox = document.getElementById('chat-box');
+            const message = input.value.trim();
+            if (!message) return;
+
+            chatBox.innerHTML += `
+                <div class="flex gap-2 justify-end">
+                    <span class="text-white font-medium bg-blue-600/40 p-2 rounded-lg max-w-[80%]">${message}</span>
+                </div>
+            `;
+            input.value = '';
+
+            setTimeout(() => {
+                let response = "That's a great question! For admission into state universities, prioritize standard regional counseling like CUET or State CETs. Focus consistently on foundational NCERT textbooks.";
+                const lower = message.toLowerCase();
+
+                if (lower.includes('b.tech') || lower.includes('alternative')) {
+                    response = "Strong technical alternatives include B.Sc. Computer Science, BCA (Bachelor of Computer Applications), and B.Sc. Data Analytics. These offer practical programming foundations at a fraction of engineering tuition.";
+                } else if (lower.includes('upsc') || lower.includes('civil')) {
+                    response = "B.A. in Political Science, History, or Economics offers direct alignment with General Studies papers in UPSC CSE. It allows ample self-study time during graduation compared to laboratory-heavy courses.";
+                } else if (lower.includes('inspire') || lower.includes('scholarship')) {
+                    response = "The INSPIRE-SHE scholarship provides ₹80,000 annually to students in the top 1% of their Class 12 boards enrolled in basic science (B.Sc. Physics, Chemistry, Math, Biology).";
+                }
+
+                chatBox.innerHTML += `
+                    <div class="flex gap-2">
+                        <span class="accent-blue font-bold">Navigator AI:</span>
+                        <span class="text-secondary bg-white/5 p-2 rounded-lg max-w-[80%]">${response}</span>
+                    </div>
+                `;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 500);
+        }
+
+        function insertQuickPrompt(text) {
+            const input = document.getElementById('ai-input');
+            if (input) {
+                input.value = text;
+                sendChatMessage();
+            }
+        }
+
+        // =================== UTILITY & LIFECYCLE ===================
+
+        function navigate(view) {
+            currentView = view;
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            const activeNav = document.getElementById(`nav-${view}`);
+            if (activeNav) activeNav.classList.add('active');
+
+            switch(view) {
+                case 'dashboard': renderDashboard(); break;
+                case 'career-guide': renderEnhancedCareerGuide(); break;
+                case 'stream-selector': renderStreamSelector(); break;
+                case 'colleges': renderAllColleges(); break;
+                case 'placements': renderPlacementsAndOpportunities(); break;
+                case 'ai-tutor': renderAITutor(); break;
+                case 'scholarships': renderScholarships(); break;
+                case 'predictor': renderAdmissionPredictor(); break;
+                default: renderDashboard();
+            }
+
+            if (view !== 'dashboard') {
+                userProgress.xp += 15;
+                updateStats();
+            }
+        }
+
+        function updateStats() {
+            const levelEl = document.getElementById('user-level');
+            const xpStreakEl = document.getElementById('user-xp-streak');
+            if (levelEl) levelEl.textContent = userProgress.level;
+            if (xpStreakEl) xpStreakEl.textContent = `${userProgress.xp.toLocaleString()} XP • ${userProgress.streak} Day Streak`;
+        }
+
+        function showNotification(message, type = 'info') {
+            const container = document.getElementById('notification-container');
+            const notification = document.createElement('div');
+            notification.className = 'p-3 rounded-xl text-white shadow-xl animate-fade-in flex items-center justify-between text-xs font-medium border border-white/20';
+            notification.style.background = type === 'success' 
+                ? 'linear-gradient(135deg, #059669, #10b981)' 
+                : 'linear-gradient(135deg, #2563eb, #3b82f6)';
+            
+            notification.innerHTML = `
+                <span>${message}</span>
+                <button onclick="this.parentElement.remove()" class="ml-3 text-sm font-bold opacity-70 hover:opacity-100">&times;</button>
+            `;
+            container.appendChild(notification);
+            setTimeout(() => { notification.remove(); }, 4000);
+        }
+
+        function showModal(content) {
+            document.getElementById('modal-content').innerHTML = content;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Initialize application
+        window.addEventListener('DOMContentLoaded', () => {
+            renderDashboard();
+            updateStats();
+        });
+  </script>
+</body>
+
+</html>
